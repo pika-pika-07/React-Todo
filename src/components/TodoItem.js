@@ -4,7 +4,11 @@ import { TodosContext } from "../contexts/TodosProvider";
 const TodoItem = ({ todo }) => {
   const { deleteTodo, toggleComplete } = useContext(TodosContext);
   return (
-    <div className="border border-black flex gap-2 justify-between p-3 m-2 rounded-lg mb-4">
+    <div
+      className={`border border-black flex gap-2 justify-between p-3 m-2 rounded-lg mb-4 ${
+        todo.completed ? "bg-green-200" : "bg-blue-200"
+      }`}
+    >
       <div>
         <input
           type="checkbox"

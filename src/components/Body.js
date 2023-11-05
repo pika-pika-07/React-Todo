@@ -2,6 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Dashboard from "./Dashboard";
+import NotFound from "./NotFound";
 import Pagination from "./Pagination";
 
 const Body = () => {
@@ -14,18 +15,18 @@ const Body = () => {
       path: "/pagination",
       element: <Pagination />,
     },
-    // {
-    //   path: "*",
-    //   element: <NotFound />,
-    // },
-    // {
-
-    // }
+    {
+      path: "*",
+      element: <NotFound />,
+    },
+    {
+      path: "/todo",
+      element: <Dashboard />,
+    },
   ]);
   return (
     <div>
       <RouterProvider router={appRouter}></RouterProvider>
-      {/* <Dashboard/> */}
     </div>
   );
 };
