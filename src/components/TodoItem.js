@@ -4,7 +4,7 @@ import { TodosContext } from "../contexts/TodosProvider";
 const TodoItem = ({ todo }) => {
   const { deleteTodo, toggleComplete } = useContext(TodosContext);
   return (
-    <div className="border border-black flex gap-2 justify-between p-2 m-2">
+    <div className="border border-black flex gap-2 justify-between p-3 m-2 rounded-lg mb-4">
       <div>
         <input
           type="checkbox"
@@ -12,11 +12,13 @@ const TodoItem = ({ todo }) => {
             toggleComplete(todo.id, e.target.checked);
           }}
         />
-        <span className={`${todo.completed ? "line-through" : ""}`}>
+        <span
+          className={`${todo.completed ? "line-through" : ""} mx-2 text-md`}
+        >
           {todo.content}
         </span>
       </div>
-      <div>
+      <div className="border border-black w-2/12 rounded-lg text-md">
         <button
           onClick={() => {
             deleteTodo(todo.id);

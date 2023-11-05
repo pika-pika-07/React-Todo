@@ -5,7 +5,7 @@ const TodoList = () => {
   const { todos } = useContext(TodosContext);
 
   return (
-    <div>
+    <div className="mt-8">
       {todos.map((todo) => (
         <TodoItem todo={todo} />
       ))}

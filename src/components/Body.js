@@ -4,9 +4,11 @@ import TodoList from "./TodoList";
 
 const Body = () => {
   return (
-    <div className="border border-black-500 flex flex-col justify-center items-center h-full w-full">
-      <AddTodo />
-      <TodoList />
+    <div className="flex flex-col justify-center items-center h-full w-full mt-20 p-10 ">
+      <div className="border border-black h-full w-4/12 shadow-lg p-4  bg-gray-400 bg-opacity-80  rounded-lg">
+        <AddTodo />
+        <TodoList />
+      </div>
     </div>
   );
 };

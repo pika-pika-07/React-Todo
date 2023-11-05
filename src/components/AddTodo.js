@@ -15,9 +15,16 @@ const AddTodo = () => {
         <input
           ref={inputRef}
           type="text"
-          className="outline-none border border-red-700"
+          className="outline-none border border-black p-1 rounded-lg w-10/12"
+          placeholder="Add Task"
         />
-        <button onClick={handleChange}> Add </button>
+        <button
+          onClick={handleChange}
+          className="border border-black w-1/12 rounded-lg ml-4 bg-red color-green"
+        >
+          {" "}
+          Add{" "}
+        </button>
       </form>
     </div>
   );
