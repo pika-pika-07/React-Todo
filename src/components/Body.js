@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import NotFound from "./NotFound";
 import Pagination from "./Pagination";
+import TodoContainer from "./TodoContainer";
 
 const Body = () => {
   const appRouter = createBrowserRouter([
@@ -21,7 +22,7 @@ const Body = () => {
     },
     {
       path: "/todo",
-      element: <Dashboard />,
+      element: <TodoContainer />,
     },
   ]);
   return (
